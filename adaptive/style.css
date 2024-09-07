@@ -1,0 +1,105 @@
+/* Базовые стили */
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  text-align: center;
+}
+header {
+  background-color: #c0c0c0;
+  padding: 1rem;
+  text-align: center;
+}
+main {
+  display: grid;
+  grid-template-columns: 66% 33%;
+  gap: 2%;
+  padding: 2%;
+  background-color: antiquewhite;
+}
+.left-content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 5%;
+}
+.left-header {
+  text-align: center;
+}
+.bottom-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 5%;
+}
+.split-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 2%;
+}
+.single-div,
+.split-container > div {
+  background-color: wheat;
+  padding: 1rem;
+}
+.single-div {
+  background-color: #e0e0e0;
+}
+.right-content {
+  background-color: rgb(212, 235, 179);
+  padding: 1rem;
+}
+footer {
+  background-color: #c0c0c0;
+  padding: 1rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 2%;
+}
+
+/* Размеры текста */
+h1 {
+  font-size: 2rem; /* Заголовок шапки, 32px */
+}
+h2 {
+  font-size: 1.5rem; /* Заголовок в левой части, 24px */
+}
+p {
+  font-size: 1rem; /* Обычный текст, 16px */
+}
+footer div {
+  font-size: 1rem; /* Текст в футере */
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 60% 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 100%;
+    gap: 5%;
+  }
+  .split-container {
+    grid-template-columns: 100%;
+  }
+  footer {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+  footer {
+    grid-template-columns: 100%;
+  }
+}
